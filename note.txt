@@ -1,0 +1,5 @@
+docker-compose exec app composer --version
+port ở .env vẫn để theo mặc định vì cùng trong network vs container
+
+docker network ls
+docker network inspect docker_laravel_app-network

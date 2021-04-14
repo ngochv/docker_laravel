@@ -78,7 +78,10 @@
                     @endauth
                 </div>
             @endif
-
+            <?php
+                $databaseName = \DB::connection()->getDatabaseName();
+                $users = \DB::table('users')->select('*')->get();
+            ?>
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
@@ -93,6 +96,14 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+
+                @if ($users)
+                <br>
+                    @foreach($users as $item)
+                        name: {{ $item->name }}
+                        <br>
+                    @endforeach
+                @endif
             </div>
         </div>
     </body>
