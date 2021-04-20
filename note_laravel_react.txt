@@ -1,0 +1,6 @@
+Resource: https://webmobtuts.com/backend-development/building-a-blog-with-reactjs-and-laravel-part-1/
+Category - post: 1-n | hasMany - belongsTo
+post-comment: 1-n | hasMany - belongsTo
+Tag - post: n-n | belongsToMany - belongsToMany
+User - post: n-1 | belongsTo - hasMany
+
